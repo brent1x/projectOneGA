@@ -1,11 +1,12 @@
+// scroll overflow
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
-        anchors:['1', '2', '3', '4', '5'],
+        anchors:['Home', 'Data', 'Report', 'About'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['1', '2', '3', '4', '5'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
+        normalScrollElements: '#inner-content-div',
         scrollOverflow: false,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
@@ -31,10 +32,10 @@ $(document).ready(function() {
         recordHistory: true,
 
         //Design
-        controlArrows: true,
+        controlArrows: false,
         verticalCentered: true,
         resize : true,
-        sectionsColor : ['#aaa', '#bbb', '#ccc', '#ddd', '#eee'],
+        sectionsColor : ['#ccc', '#ddd', "#eee", '#fff'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -52,4 +53,17 @@ $(document).ready(function() {
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction){}
     });
+
+    $('#inner-content-div').slimScroll({
+        height: '480px',
+        width: '75%',
+        size: '8px',
+        railVisible: true,
+        alwaysVisible: true,
+        color: '#00f',
+        railColor: '#222',
+        railOpacity: 0.3,
+        allowPageScroll: false
+    });
+
 });
