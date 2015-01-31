@@ -1,6 +1,7 @@
-// scroll overflow
 
 $(document).ready(function() {
+
+    // fullpage.js code
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
@@ -54,6 +55,7 @@ $(document).ready(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction){}
     });
 
+    // slimscroll code
     $('#inner-content-div').slimScroll({
         height: '480px',
         width: '75%',
