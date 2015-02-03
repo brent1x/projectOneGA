@@ -5,7 +5,7 @@ $(document).ready(function() {
         //Navigation
         menu: false,
         anchors:['Home', 'Data', 'Report', 'About'],
-        navigation: false,
+        navigation: true,
         navigationPosition: 'right',
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -21,8 +21,8 @@ $(document).ready(function() {
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        normalScrollElements: '#inner-content-div',
-        scrollOverflow: false,
+        normalScrollElements: '#scrolla',
+        scrollOverflow: true,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
 
@@ -33,10 +33,10 @@ $(document).ready(function() {
 
         //Design
         controlArrows: false,
-        verticalCentered: true,
+        verticalCentered: false,
         resize : true,
-        sectionsColor : ['#fff', '#fff', "#fff", '#fff'],
-        paddingTop: '3em',
+        sectionsColor : ['#FFF', '#FFF', "#EEE", '#FFF'],
+        paddingTop: '100px',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
         responsive: 0,
@@ -52,19 +52,6 @@ $(document).ready(function() {
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction){}
-    });
-
-    // slimscroll code
-    $('#inner-content-div').slimScroll({
-        height: '480px',
-        width: '75%',
-        size: '8px',
-        railVisible: true,
-        alwaysVisible: true,
-        color: '#00f',
-        railColor: '#222',
-        railOpacity: 0.3,
-        allowPageScroll: false
     });
 
 });

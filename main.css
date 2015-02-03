@@ -6,6 +6,15 @@ html, button, input, select, textarea,
     font-weight: 300;
 }
 
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+.bg {
+  background-image: url("bg.png");
+  background-color: transparent;
+}
+
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,13 +25,18 @@ html, button, input, select, textarea,
   text-align: center;
 }
 
-.heady {
-  min-height: 500px;
+.lefty {
+  text-align: left;
+}
+
+.greyed {
+  color: #B6B6B6;
 }
 
 .emphasis {
   font-weight: 700;
   font-size: 2em;
+  text-align: center;
 }
 
 .spacer {
