@@ -3,7 +3,7 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     font-family: Lato, sans-serif;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .pure-g > div {
@@ -14,4 +14,17 @@ html, button, input, select, textarea,
 
 .l-box {
   text-align: center;
+}
+
+.heady {
+  min-height: 500px;
+}
+
+.emphasis {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.spacer {
+  min-height: 50px;
 }
