@@ -39,53 +39,7 @@
     <!-- II. DATA -->
     <div class="section gradient">
 
-      <!-- i. HEATMAP -->
-      <div class="slide">
-        <div class="pure-g">
-          <div class="pure-u-5-5 l-box">
-            <p>
-              <span class="emphasis">
-                Data » Heat Map
-              </span>
-              <br />
-            </p>
-              <a class="pure-button pure-button-active" href="#Data">Heat Map</a>
-                <span>&nbsp; &nbsp; &nbsp;</span>
-              <a class="pure-button" href="#Data/1">Charted</a>
-                <span>&nbsp; &nbsp; &nbsp;</span>
-              <a class="pure-button" href="#Data/2">Raw Data</a>
-              <div class="spacer"></div>            
-
-            <iframe width="600px" height="400px" frameborder="0" src="mapframe.html"></iframe>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- ii. CHART -->
-      <div class="slide">
-        <div class="pure-g">
-          <div class="pure-u-5-5 l-box">
-            <p>
-              <span class="emphasis">
-                Data » Chart
-              </span>
-              <br />
-            </p>
-              <a class="pure-button " href="#Data">Heat Map</a>
-                <span>&nbsp; &nbsp; &nbsp;</span>
-              <a class="pure-button pure-button-active" href="#Data/1">Charted</a>
-                <span>&nbsp; &nbsp; &nbsp;</span>
-              <a class="pure-button" href="#Data/2">Raw Data</a>
-              <div class="spacer"></div>
-            
-            <canvas id="buyers" width="600px" height="400px"></canvas>
-          
-          </div>
-        </div>
-      </div>
-
-      <!-- iii. RAW TABLE -->
+      <!-- i. RAW DATA -->
       <div class="slide">
         <div class="pure-g">
           <div class="pure-u-5-5 l-box">
@@ -95,11 +49,11 @@
               </span>
               <br />
             </p>
-            <a class="pure-button" href="#Data">Heat Map</a>
-            <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button" href="#Data/1">Charted</a>
-            <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button pure-button-active" href="#Data/2">Raw Data</a>
+            <a class="pure-button pure-button-active" href="#Data">Raw Data</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button" href="#Data/1">Mapped</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button" href="#Data/2">Charted</a>
             <div class="spacer"></div>
             
             <div id="scrolla">
@@ -109,6 +63,52 @@
             <span class="greyed">Download the <a href="dbd_Feb4.csv">CSV</a> or <a href="dbd_Feb4.JSON">JSON</a> file.</span>
 
 
+          </div>
+        </div>
+      </div>
+
+      <!-- ii. HEATMAP -->
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-5-5 l-box">
+            <p>
+              <span class="emphasis">
+                Data » Heat Map
+              </span>
+              <br />
+            </p>
+            <a class="pure-button" href="#Data">Raw Data</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button pure-button-active" href="#Data/1">Mapped</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button" href="#Data/2">Charted</a>
+            <div class="spacer"></div>           
+
+            <iframe width="600px" height="400px" frameborder="0" src="mapframe.html"></iframe>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- iii. CHART -->
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-5-5 l-box">
+            <p>
+              <span class="emphasis">
+                Data » Chart
+              </span>
+              <br />
+            </p>
+            <a class="pure-button" href="#Data">Raw Data</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button" href="#Data/1">Mapped</a>
+              <span>&nbsp; &nbsp; &nbsp;</span>
+            <a class="pure-button pure-button-active" href="#Data/2">Charted</a>
+            <div class="spacer"></div>
+            
+            <canvas id="buyers" width="600px" height="400px"></canvas>
+          
           </div>
         </div>
       </div>
