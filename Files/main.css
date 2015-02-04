@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+.bg {
+  background-image: url("bg.jpg");
+  background-color: transparent;
+}
+
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.l-box {
+  text-align: center;
+}
+
+.lefty {
+  text-align: left;
+}
+
+.greyed {
+  color: #B6B6B6;
+  font-size: 12px;
+}
+
+.gradient{
+  background: -webkit-gradient(linear, top left, bottom left, from(#FFFFFF), to(#F2F2F2));
+  background: -webkit-linear-gradient(#FFFFFF, #F2F2F2);
+  background: linear-gradient(#FFFFFF, #F2F2F2);
+}
+
+.emphasis {
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+
+.spacer {
+  min-height: 30px;
+}
