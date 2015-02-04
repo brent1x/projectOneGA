@@ -11,7 +11,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .bg {
-  background-image: url("bg.png");
+  background-image: url("bg2.png");
   background-color: transparent;
 }
 
@@ -31,6 +31,13 @@ a, a:hover, a:visited, a:active {
 
 .greyed {
   color: #B6B6B6;
+  font-size: 10px;
+}
+
+.gradient{
+  background: -webkit-gradient(linear, top left, bottom left, from(#FFFFFF), to(#F2F2F2));
+  background: -webkit-linear-gradient(#FFFFFF, #F2F2F2);
+  background: linear-gradient(#FFFFFF, #F2F2F2);
 }
 
 .emphasis {
@@ -40,5 +47,5 @@ a, a:hover, a:visited, a:active {
 }
 
 .spacer {
-  min-height: 50px;
+  min-height: 30px;
 }

@@ -4,9 +4,9 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
-        anchors:['Home', 'Data', 'Report', 'About'],
-        navigation: true,
-        navigationPosition: 'right',
+        anchors: ['Home', 'Data', 'Report', 'About'],
+        navigation: false,
+        navigationPosition: 'right',   
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
         autoScrolling: true,
         scrollBar: true,
         easing: 'easeInQuart',
-        easingcss3: 'ease',
+        easingcss3: 'ease-out',
         loopBottom: false,
         loopTop: false,
         loopHorizontal: true,
@@ -35,10 +35,10 @@ $(document).ready(function() {
         controlArrows: false,
         verticalCentered: false,
         resize : true,
-        sectionsColor : ['#FFF', '#FFF', "#EEE", '#FFF'],
+        sectionsColor : ['#FFF', '#FFF', "#FFF", '#FFF'],
         paddingTop: '100px',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        fixedElements: '#footer',
         responsive: 0,
 
         //Custom selectors
