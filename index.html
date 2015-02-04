@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.6/jquery.fullPage.min.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css">
-    <link rel="stylesheet" text="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.6/jquery.fullPage.min.js"></script>
+    <srcipt src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.3/jquery.slimscroll.min.js"></srcipt>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -21,7 +22,7 @@
         <div class="pure-u-5-5 l-box">
           <p>
             <span class="emphasis">
-              Drone Boned
+            Drone Boned
             </span>
             <br />
             Tracking consumer drone incidents from 2014 onward
@@ -51,9 +52,9 @@
             </p>
             <a class="pure-button pure-button-active" href="#Data">Raw Data</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button" href="#Data/1">Mapped</a>
+            <a class="pure-button" href="#Data/Mapped">Mapped</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button" href="#Data/2">Charted</a>
+            <a class="pure-button" href="#Data/Charted">Charted</a>
             <div class="spacer"></div>
             
             <div id="scrolla">
@@ -68,7 +69,7 @@
       </div>
 
       <!-- ii. HEATMAP -->
-      <div class="slide">
+      <div class="slide" data-anchor="Mapped">
         <div class="pure-g">
           <div class="pure-u-5-5 l-box">
             <p>
@@ -79,9 +80,9 @@
             </p>
             <a class="pure-button" href="#Data">Raw Data</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button pure-button-active" href="#Data/1">Mapped</a>
+            <a class="pure-button pure-button-active" href="#Data/Mapped">Mapped</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button" href="#Data/2">Charted</a>
+            <a class="pure-button" href="#Data/Charted">Charted</a>
             <div class="spacer"></div>           
 
             <iframe width="600px" height="400px" frameborder="0" src="mapframe.html"></iframe>
@@ -91,7 +92,7 @@
       </div>
 
       <!-- iii. CHART -->
-      <div class="slide">
+      <div class="slide" data-anchor="Charted">
         <div class="pure-g">
           <div class="pure-u-5-5 l-box">
             <p>
@@ -102,12 +103,13 @@
             </p>
             <a class="pure-button" href="#Data">Raw Data</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button" href="#Data/1">Mapped</a>
+            <a class="pure-button" href="#Data/Mapped">Mapped</a>
               <span>&nbsp; &nbsp; &nbsp;</span>
-            <a class="pure-button pure-button-active" href="#Data/2">Charted</a>
+            <a class="pure-button pure-button-active" href="#Data/Charted">Charted</a>
             <div class="spacer"></div>
             
-            <canvas id="buyers" width="600px" height="400px"></canvas>
+            <canvas id="incidents" width="600px" height="400px"></canvas><br />
+            <span class="greyed">2014 (Gray) vs. 2015 (Blue) Incidents By Month</span>
           
           </div>
         </div>
@@ -157,7 +159,7 @@
             <div class="spacer"></div>
 
             <p class="lefty">
-              This site attemps to track consumer drone incidents reported in the United States beginning in 2014. I've sourced data from the FAA<sup><a href="http://mobile.nytimes.com/blogs/bits/2014/11/26/new-f-a-a-report-tallies-drone-sightings-highlighting-safety-issues/">1</a></sup>, The Democrat & Chronicle<sup><a href="http://rocdocs.democratandchronicle.com/map/domestic-drone-accidents">2</a></sup>, and my own reporting.
+              This site attemps to track consumer drone incidents reported in the United States beginning in 2014. I've sourced data from the FAA<sup><a href="http://mobile.nytimes.com/blogs/bits/2014/11/26/new-f-a-a-report-tallies-drone-sightings-highlighting-safety-issues/">1</a></sup>, The Democrat & Chronicle<sup><a href="http://rocdocs.democratandchronicle.com/map/domestic-drone-accidents">2</a></sup>, and my own reporting, but I make no claims to its completeness. If you are aware of an incident, please send it my own via the <a href="#Report">Report</a> page. I will groom the data over time.
             </p>
             <p class="lefty">
               This is my first ever coding project. Please feel free to contribute on <a href="https://github.com/brent1x/projectOneGA">Github</a>. I've released this project under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT License</a>.
@@ -174,20 +176,35 @@
   </div>
  
   <script>
-    var buyerData = {
+    var incidentData = {
       labels : ["January","February","March","April","May","June", "July", "August", "September", "October", "November", "December"],
       datasets : [
         {
-          fillColor : "rgba(172,194,132,0.4)",
-          strokeColor : "#ACC26D",
-          pointColor : "#fff",
-          pointStrokeColor : "#9DB86D",
-          data : [203,156,99,251,305,247]
+            label: "2014 Drone Incidents by Month",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [0, 1, 2, 6, 12, 17, 40, 31, 41, 42, 9, 0]
+        },
+        {
+            label: "2015 Drone Incidents by Month",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [1]
         }
       ]
     };
-    var buyers = document.getElementById('buyers').getContext('2d');
-    new Chart(buyers).Line(buyerData);
+    var incidents = document.getElementById('incidents').getContext('2d');
+    new Chart(incidents).Line(incidentData, {
+    bezierCurve: false
+});
   </script>
   <script src="app.js"></script>
   </body>
