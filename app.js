@@ -34,7 +34,7 @@ $(document).ready(function() {
         //Design
         controlArrows: false,
         verticalCentered: false,
-        resize : true,
+        resize : false,
         sectionsColor : ['#FFF', '#FFF', "#FFF", '#FFF'],
         paddingTop: '100px',
         paddingBottom: '10px',

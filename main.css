@@ -11,7 +11,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .bg {
-  background-image: url("bg2.png");
+  background-image: url("bg.jpg");
   background-color: transparent;
 }
 
@@ -31,7 +31,7 @@ a, a:hover, a:visited, a:active {
 
 .greyed {
   color: #B6B6B6;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .gradient{
