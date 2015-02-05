@@ -49,3 +49,8 @@ a, a:hover, a:visited, a:active {
 .spacer {
   min-height: 30px;
 }
+
+.big_spacer {
+  min-height: 300px;
+}
+
