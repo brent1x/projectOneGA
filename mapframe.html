@@ -16,6 +16,7 @@
       <script type="text/javascript">
         var mapOptions = {
           zoom: 3,
+          radius: 20,
           center: new google.maps.LatLng(37.6990109, -97.3439585),
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -227,7 +228,7 @@
         var heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData
         });
-        heatmap.setOptions({radius: heatmap.get('50')});
+        heatmap.setOptions({radius: heatmap.get('20')});
         heatmap.setMap(map);
       </script>
   </body>

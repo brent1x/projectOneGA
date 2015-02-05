@@ -7,7 +7,7 @@ $(document).ready(function() {
         anchors: ['Home', 'Data', 'Report', 'About'],
         navigation: false,
         navigationPosition: 'right',   
-        slidesNavigation: true,
+        slidesNavigation: false,
         slidesNavPosition: 'bottom',
 
         //Scrolling
