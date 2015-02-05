@@ -34,10 +34,22 @@ a, a:hover, a:visited, a:active {
   font-size: 12px;
 }
 
-.gradient{
-  background: -webkit-gradient(linear, top left, bottom left, from(#FFFFFF), to(#F2F2F2));
-  background: -webkit-linear-gradient(#FFFFFF, #F2F2F2);
-  background: linear-gradient(#FFFFFF, #F2F2F2);
+.gradient {
+  background: -webkit-gradient(linear, top left, bottom left, from(#fafafa), to(#f5f5f5));
+  background: -webkit-linear-gradient(#fafafa, #f5f5f5);
+  background: linear-gradient(#fafafa, #f5f5f5);
+}
+
+.gradient2 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#f0f0f0), to(#ebebeb));
+  background: -webkit-linear-gradient(#f0f0f0, #ebebeb);
+  background: linear-gradient(#f0f0f0, #ebebeb);
+}
+
+.gradient3 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#e6e6e6), to(#e1e1e1));
+  background: -webkit-linear-gradient(#e6e6e6, #e1e1e1);
+  background: linear-gradient(#e6e6e6, #e1e1e1);
 }
 
 .emphasis {
@@ -47,10 +59,10 @@ a, a:hover, a:visited, a:active {
 }
 
 .spacer {
-  min-height: 30px;
+  min-height: 1em;
 }
 
 .big_spacer {
-  min-height: 300px;
+  min-height: 25em;
 }
 
